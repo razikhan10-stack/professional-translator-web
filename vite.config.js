@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename)
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/professional-translator-web/",
+  base: process.env.NODE_ENV === 'production' ? "/professional-translator-web/" : "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
