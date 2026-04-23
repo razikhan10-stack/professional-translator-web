@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ShieldCheck, FileText, Globe, Search, BookOpen, PenTool, Scale, ChevronRight } from "lucide-react"
-
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
