@@ -16,7 +16,7 @@ export default function App() {
               Professional <span className="text-amber-600">Translator</span>
             </span>
           </div>
-          
+
           <div className="hidden md:flex items-center gap-8">
             <a href="#" className="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Translations</a>
             <a href="#" className="text-sm font-medium text-slate-600 hover:text-blue-900 transition-colors">Legal Agreement</a>
@@ -35,27 +35,27 @@ export default function App() {
       <section className="relative overflow-hidden bg-blue-950 text-white pb-24 pt-32 lg:pb-32 lg:pt-40">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/50 to-blue-950"></div>
-        
+
         <div className="container relative mx-auto px-4 lg:px-8 text-center max-w-5xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium mb-8">
             <ShieldCheck size={16} />
             <span>100% Free & Secure Platform</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-white">
             Document Translation & <br className="hidden md:block" />
             <span className="text-amber-500">Legal Drafting</span> in One Place.
           </h1>
-          
+
           <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
             Professional translations, E-Stamping, Sale/Purchase Agreements, and Affidavits made simple. All 100% FREE and easy to use, with just a few clicks.
           </p>
 
           <div className="p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm max-w-4xl mx-auto mb-12 shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <p className="text-xl md:text-2xl font-medium text-amber-400 mb-6 leading-[2.5]" dir="rtl" style={{fontFamily: "var(--font-urdu)"}}>
+            <p className="text-xl md:text-2xl font-medium text-amber-400 mb-6 leading-[2.5]" dir="rtl" style={{ fontFamily: "var(--font-urdu)" }}>
               آپ کی سہولت کے لیے ڈاکومنٹس ٹرانسلیشن، نکاح نامہ، برتھ سرٹیفکیٹ وغیرہ اور لیگل ڈاکومنٹس، خرید و فروخت کے معاہدہ جات وغیرہ مفت میں دستیاب ہیں
             </p>
-            <p className="text-lg text-blue-200 leading-[2.2]" dir="rtl" style={{fontFamily: "var(--font-urdu)"}}>
+            <p className="text-lg text-blue-200 leading-[2.2]" dir="rtl" style={{ fontFamily: "var(--font-urdu)" }}>
               جس ڈاکومنٹس کی آپ کو ضرورت ہے اس پر کلک کریں، ایڈٹ کریں اور ڈاؤنلوڈ کر لیں
             </p>
           </div>
@@ -107,7 +107,7 @@ export default function App() {
               <h3 className="text-xl font-bold mb-3 text-slate-900">3. Download & Print</h3>
               <p className="text-slate-600">Once ready, download your document in PDF or Word format and it's ready for use.</p>
             </div>
-            
+
             {/* Connector Lines (Hidden on mobile) */}
             <div className="hidden md:block absolute top-10 left-[25%] w-[15%] border-t-2 border-dashed border-slate-200"></div>
             <div className="hidden md:block absolute top-10 right-[25%] w-[15%] border-t-2 border-dashed border-slate-200"></div>
