@@ -1,7 +1,34 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ShieldCheck, FileText, Globe, Search, BookOpen, PenTool, Scale, ChevronRight } from "lucide-react"
+import { ShieldCheck, FileText, Globe, Search, BookOpen, PenTool, Scale, ChevronRight, ArrowLeft } from "lucide-react"
+import DocumentGenerator from "./components/DocumentGenerator"
+import AdminTemplateBuilder from "./components/AdminTemplateBuilder"
+
 export default function App() {
+  const [showEditor, setShowEditor] = useState(false);
+
+  if (window.location.pathname.endsWith('/admin')) {
+    return <AdminTemplateBuilder />;
+  }
+
+  if (showEditor) {
+    return (
+      <div className="flex flex-col h-screen bg-slate-50">
+        <div className="flex items-center gap-4 p-4 border-b bg-white">
+          <Button variant="ghost" onClick={() => setShowEditor(false)}>
+            <ArrowLeft className="mr-2" size={16} /> Back to Home
+          </Button>
+          <span className="text-xl font-bold text-blue-950">
+            Document <span className="text-amber-600">Editor</span>
+          </span>
+        </div>
+        <div className="flex-1 overflow-hidden">
+          <DocumentGenerator />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       {/* Navigation */}
@@ -132,15 +159,18 @@ export default function App() {
                 </Card>
 
                 {/* Service Card 4 */}
-                <Card className="border-0 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-shadow bg-white overflow-hidden group cursor-pointer border border-dashed border-slate-300 bg-slate-50/50 flex flex-col items-center justify-center text-center">
+                <Card 
+                  className="border-0 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-shadow bg-white overflow-hidden group cursor-pointer border border-dashed border-slate-300 bg-slate-50/50 flex flex-col items-center justify-center text-center"
+                  onClick={() => setShowEditor(true)}
+                >
                   <CardContent className="p-8">
-                    <div className="h-16 w-16 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center mb-4 mx-auto">
+                    <div className="h-16 w-16 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                       <PenTool size={28} />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Document Editor App</h3>
-                    <p className="text-slate-500 text-sm mb-4">Edit documents directly in your browser. Coming soon.</p>
+                    <p className="text-slate-500 text-sm mb-4">Edit documents directly in your browser.</p>
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider">
-                      Phase 2
+                      Open Editor
                     </div>
                   </CardContent>
                 </Card>
